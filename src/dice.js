@@ -1,10 +1,14 @@
-function Dice(faces = 7) {
-  this.faces = faces
+(function(exports) {
 
-  Dice.prototype.roll = function() {
+  function Dice() {
+
+  }
+
+  Dice.prototype._roll = function() {
     min = Math.ceil(1);
-    max = Math.floor(faces + 1);
+    max = Math.floor(8);
     return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
   };
 
-}
+exports.Dice = Dice;
+})(this)
