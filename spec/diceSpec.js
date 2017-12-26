@@ -11,10 +11,10 @@ describe('Dice', function() {
       expect(dice.roll()).toEqual(3);
     });
 
-    it('create a dice with 20 faces and roll it returning 20', function() {
-      dice20.roll = jasmine.createSpy("Return 20").and.returnValue(20)
-      expect(dice20.roll()).toEqual(20);
-    })
+    // it('create a dice with 20 faces and roll it returning 20', function() {
+    //   dice20.roll = jasmine.createSpy("Return 20").and.returnValue(20)
+    //   expect(dice20.roll()).toEqual(20);
+    // })
   });
 
 
