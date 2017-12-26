@@ -4,14 +4,21 @@ describe('DiceGame', function() {
     dicegame = new DiceGame();
   });
 
-  describe('Roll_Save', function() {
+  describe('rollAndSave', function() {
 
-    it('Roll the dice and save the score', function() {
+    it('Roll the dice and save the score of the first roll in the array', function() {
       dicegame.dice.roll = jasmine.createSpy('Return 3').and.returnValue(3)
-      dicegame.roll_save()
-      expect(dicegame.roll1).toEqual(3);
-    })
+      dicegame.rollAndSave()
+      expect(dicegame.rolls[0]).toEqual(3);
+    });
 
+    it('Raise up an error if you try to make more than 2 rolls',function() {
+      dicegame.rollAndSave()
+      dicegame.rollAndSave()
+      expect(function() {
+        dicegame.rollAndSave()
+      }).toThrow("You can roll only 2 times, now check your final score.")
+    });
   });
 
 });
