@@ -21,4 +21,13 @@ describe('DiceGame', function() {
     });
   });
 
+  describe('getTotalScore', function() {
+    it('Return the total score after two rolls',function() {
+      dicegame.dice.roll = jasmine.createSpy('Return 3').and.returnValue(3)
+      dicegame.rollAndSave()
+      dicegame.rollAndSave()
+      expect(dicegame.getTotalScore()).toEqual(6);
+    });
+  });
+
 });
