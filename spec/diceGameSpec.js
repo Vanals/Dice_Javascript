@@ -7,7 +7,7 @@ describe('DiceGame', function() {
   describe('rollAndSave', function() {
 
     it('Roll the dice and save the score of the first roll in the array', function() {
-      dicegame.dice.roll = jasmine.createSpy('Return 3').and.returnValue(3)
+      dicegame.dice._roll = jasmine.createSpy('Return 3').and.returnValue(3)
       dicegame.rollAndSave()
       expect(dicegame.rolls[0]).toEqual(3);
     });
@@ -23,7 +23,7 @@ describe('DiceGame', function() {
 
   describe('getTotalScore', function() {
     it('Return the total score after two rolls',function() {
-      dicegame.dice.roll = jasmine.createSpy('Return 3').and.returnValue(3)
+      dicegame.dice._roll = jasmine.createSpy('Return 3').and.returnValue(3)
       dicegame.rollAndSave()
       dicegame.rollAndSave()
       expect(dicegame.getTotalScore()).toEqual(6);
