@@ -30,4 +30,12 @@ describe('DiceGame', function() {
     });
   });
 
+  describe('resetScore', function() {
+    it('Reset the score, allowing you to roll again', function() {
+      dicegame.rollAndSave()
+      dicegame.rollAndSave()
+      dicegame.resetScore()
+      expect(dicegame.rolls).toEqual([]);
+    });
+  });
 });
