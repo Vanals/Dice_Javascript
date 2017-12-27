@@ -1,7 +1,8 @@
 $(document).ready(function() {
 
   dicegame = new DiceGame();
-
+  $("#rollbutton").addClass("animated shake");
+  // $(".btn").addClass("shake")
   $('#rollbutton').click(function() {
     if (dicegame.rolls.length === 0) {
       dicegame.rollAndSave()

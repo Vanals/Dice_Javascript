@@ -1,0 +1,87 @@
+body {
+  font-family: 'Bungee', cursive;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  position: absolute;
+  top: 10%;
+  left: 43%;
+}
+
+input {
+  border-radius: 50px;
+  width: 100px;
+  height: 100px;
+  font-size: 15px;
+  outline: none;
+  box-shadow: 5px 10px;
+}
+/* input:hover */
+input:active{
+  transform: translateY(3px);
+  box-shadow: 2px 4px;
+}
+
+#square{
+  width: 450px;
+  height: 550px;
+  background-color: rgb(226, 105, 102);
+  border-radius: 20px;
+  position: absolute;
+  top: 5%;
+  left: 34%;
+  box-shadow: 5px 20px rgb(47, 27, 27);
+}
+
+#finalscorebutton {
+  width: 120px;
+  height: 120px;
+}
+
+#rollbutton {
+  position: absolute;
+  top: 50%;
+  left: 35%;
+}
+
+#finalscorebutton {
+  position: absolute;
+  top: 50%;
+  left: 45%;
+}
+
+#resetgame {
+  position: absolute;
+  top: 50%;
+  left: 55%;
+}
+
+
+#rollsscore1 {
+  position: absolute;
+  top: 25%;
+  left: 45%;
+}
+
+#rollsscore2 {
+  position: absolute;
+  top: 30%;
+  left: 45%;
+}
+
+#totalscore {
+  position: absolute;
+  top: 42%;
+  left: 48%;
+}
+
+#funnyfinalsentence {
+  position: absolute;
+  top: 38%;
+  left: 45%;
+}

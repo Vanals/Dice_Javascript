@@ -7,15 +7,25 @@
     <script src="../src/jQuery.js"></script>
     <script src="../src/dice.js"></script>
     <script src="../src/diceGame.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="diceGame.css">
     <title>Dice Game</title>
   </head>
   <body>
+    <div id="square"></div>
     <h1>Dice Game</h1>
+    <!-- IF the div tag was after the h1 tag, the h1 tag would have been covered
+    It's like photoshop layers.-->
     <p id='rollsscore1'></p> <p id='rollsscore2'></p>
+
     <input type="submit" value="Roll" id='rollbutton'>
+
     <input type="submit" value="Get final score" id='finalscorebutton'>
+
     <input type="submit" value="Reset" id="resetgame">
-    <h2 id="totalscore"></h2>
+
+    <h1 id="totalscore"></h1>
+
     <h3 id="funnyfinalsentence"></h3>
   </body>
 </html>
