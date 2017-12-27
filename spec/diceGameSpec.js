@@ -43,4 +43,31 @@ describe('DiceGame', function() {
       expect(dicegame.rolls).toEqual([]);
     });
   });
+
+  describe('finalFunnySentence', function() {
+    it('Return a funny sentence if final score <= 5', function() {
+      dicegame.dice._roll = jasmine.createSpy('Return 1').and.returnValue(1)
+      dicegame.rollAndSave()
+      dicegame.rollAndSave()
+      dicegame.getTotalScore()
+      expect(dicegame.finalFunnySentence()).toEqual("Uh! Ok maybe is not your lucky day...is better if you stay at home today!");
+    });
+
+    it('Return a funny sentence if final score > than 5 and < than 10', function() {
+      dicegame.dice._roll = jasmine.createSpy('Return 1').and.returnValue(3)
+      dicegame.rollAndSave()
+      dicegame.rollAndSave()
+      dicegame.getTotalScore()
+      expect(dicegame.finalFunnySentence()).toEqual("Good, not bad!");
+    });
+
+    it('Return a funny sentence if final score > than 10', function() {
+      dicegame.dice._roll = jasmine.createSpy('Return 1').and.returnValue(6)
+      dicegame.rollAndSave()
+      dicegame.rollAndSave()
+      dicegame.getTotalScore()
+      expect(dicegame.finalFunnySentence()).toEqual("Awsome, not bad at all! You should try to invest in bitcoin today!");
+    });
+
+  });
 });

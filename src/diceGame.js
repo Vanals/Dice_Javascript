@@ -17,3 +17,13 @@ DiceGame.prototype.getTotalScore = function () {
 DiceGame.prototype.resetScore = function () {
   this.rolls = []
 };
+
+DiceGame.prototype.finalFunnySentence = function () {
+  if (this.rolls.reduce((a, b) => a + b) <= 5) {
+    return "Uh! Ok maybe is not your lucky day...is better if you stay at home today!"
+  } else if (this.rolls.reduce((a, b) => a + b) > 5 && this.rolls.reduce((a, b) => a + b) < 10) {
+    return "Good, not bad!"
+  } else if (this.rolls.reduce((a, b) => a + b) > 10){
+    return "Awsome, not bad at all! You should try to invest in bitcoin today!"
+  }
+};
