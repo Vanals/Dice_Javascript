@@ -12,3 +12,7 @@ DiceGame.prototype.rollAndSave = function () {
 DiceGame.prototype.getTotalScore = function () {
   return this.rolls.reduce((a, b) => a + b)
 };
+
+DiceGame.prototype.resetScore = function () {
+  this.rolls = []
+};
