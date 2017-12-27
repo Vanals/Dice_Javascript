@@ -19,6 +19,7 @@ $(document).ready(function() {
   $('#finalscorebutton').click(function() {
     try {
       $('#totalscore').html(dicegame.getTotalScore());
+      showFinalFunnySentence()
     } catch(err) {
       alert(err);
     }
@@ -28,7 +29,11 @@ $(document).ready(function() {
     dicegame.resetScore()
     $('#rollsscore1').html(``)
     $('#rollsscore2').html(``)
-    $('#totalscore').html(``);
+    $('#totalscore').html(``)
+    $('#funnyfinalsentence').html(``)
   });
 
+  function showFinalFunnySentence() {
+    $('#funnyfinalsentence').html(dicegame.finalFunnySentence())
+  }
 });
