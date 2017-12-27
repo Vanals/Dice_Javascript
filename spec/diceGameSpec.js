@@ -28,6 +28,11 @@ describe('DiceGame', function() {
       dicegame.rollAndSave()
       expect(dicegame.getTotalScore()).toEqual(6);
     });
+    it('Raise up an error if you try to get the final score without have rolled the dice twice',function() {
+      expect(function() {
+        dicegame.getTotalScore()
+      }).toThrow("You have to roll the dice to times to get the final score.")
+    });
   });
 
   describe('resetScore', function() {

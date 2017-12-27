@@ -10,6 +10,7 @@ DiceGame.prototype.rollAndSave = function () {
 };
 
 DiceGame.prototype.getTotalScore = function () {
+  if (this.rolls.length != 2) throw "You have to roll the dice to times to get the final score."
   return this.rolls.reduce((a, b) => a + b)
 };
 
