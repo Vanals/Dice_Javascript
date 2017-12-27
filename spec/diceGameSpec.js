@@ -31,7 +31,7 @@ describe('DiceGame', function() {
     it('Raise up an error if you try to get the final score without have rolled the dice twice',function() {
       expect(function() {
         dicegame.getTotalScore()
-      }).toThrow("You have to roll the dice to times to get the final score.")
+      }).toThrow("You have to roll the dice two times to get the final score.")
     });
   });
 
