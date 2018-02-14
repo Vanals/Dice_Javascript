@@ -16,11 +16,7 @@ git clone http://git@github.com:Vanals/Dice_Javascript.git
 ```
 cd Dice_Javascript
 ```
-3) Changes into the views section
-```
-cd views
-```
-4) Open index.html and enjoy!
+3) Open index.html and enjoy!
 ```
 open index.html
 ```
