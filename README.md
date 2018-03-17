@@ -4,7 +4,7 @@ Simple script that allow the user to play to a Dice Game. The player can roll tw
 Once finish is possible reset the score and start again a new game.
 
 
-PICTURE
+![](https://image.ibb.co/jNrG5H/Screen_Shot_2018_03_17_at_22_17_53.png)
 
 ## How to use
 
